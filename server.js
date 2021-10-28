@@ -30,4 +30,4 @@ io.on('connection', socket => {
     })
 })
 
-server.listen(3040) // Run the server on the 3000 port
+server.listen(process.env.PORT ||3040) // Run the server on the 3000 port
