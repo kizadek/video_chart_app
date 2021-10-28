@@ -1,13 +1,19 @@
 const express = require("express");
+const http = require('http');
 const app = express();
-const server = require("http").Server(app);
+const server = http.createServer(app);
 const { v4: uuidv4 } = require("uuid");
 app.set("view engine", "ejs");
+
+
 const io = require("socket.io")(server, {
   cors: {
-    origin: '*'
+    origin: "http://localhost:3030",
+    methods: ["GET", "POST"]
   }
 });
+
+
 const { ExpressPeerServer } = require("peer");
 const peerServer = ExpressPeerServer(server, {
   debug: true,

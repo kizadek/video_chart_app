@@ -4,9 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "nodedmon server.js",
+    "dev": "nodemon server.js",
     "start": "node server.js"
-
   },
   "repository": {
     "type": "git",
@@ -14,6 +13,9 @@
   },
   "author": "Mupela Nsowa",
   "license": "ISC",
+  "engines": {
+    "node": "14.17.6"
+  },
   "bugs": {
     "url": "https://github.com/kizadek/video_chart_app/issues"
   },
